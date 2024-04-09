@@ -46,4 +46,5 @@
 .imgContainer{
     flex: 1;
     position: relative;
+    object-fit: contain;
 }

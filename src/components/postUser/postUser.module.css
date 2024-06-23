@@ -1,14 +1,25 @@
-.Container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.title{
-    color: gray;
-    font-weight: bold;
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.username{
-    font-weight: 500;
+.title {
+  color: gray;
+  font-weight: bold;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
 }

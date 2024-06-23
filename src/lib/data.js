@@ -1,4 +1,4 @@
-import { ErrorBoundaryHandler } from "next/dist/client/components/error-boundary";
+import { unstable_noStore as noStore } from "next/cache";
 import { connectToDb } from "./utils";
 import { Post, User } from "./models";
 
@@ -25,6 +25,7 @@ export const getPost = async (slug) => {
 };
 
 export const getUser = async (id) => {
+  noStore();
   try {
     connectToDb();
     const user = await User.findById(id);

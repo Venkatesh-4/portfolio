@@ -11,16 +11,15 @@ const posts = [
   { id: 4, title: "Post 4", body: "......", userId: 2 },
 ];
 
-export const getPosts = async() =>{
-    return posts
-}
+export const getPosts = async () => {
+  return posts;
+};
 
 export const getPost = async (id) => {
-    const post=posts.find((post) => post.id === parseInt(id));
-    return post
-}
+  const post = posts.find((post) => post.id === parseInt(id));
+  return post;
+};
 
-export const getUser = async(id) =>{
-    return users.find((user) => user.id === parseInt(id));
-}
-
+export const getUser = async (id) => {
+  return users.find((user) => user.id === parseInt(id));
+};

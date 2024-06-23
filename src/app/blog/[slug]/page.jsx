@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 
 const SinglePostPage = async ({ params }) => {
-  console.log(params);
+  //   console.log(params);
   const { slug } = params;
   const post = await getPost(slug);
   // console.log(post)

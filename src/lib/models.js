@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-import { TURBO_TRACE_DEFAULT_MEMORY_LIMIT } from "next/dist/shared/lib/constants";
 
-const userSchema = new mongoose(
+const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
@@ -32,7 +31,7 @@ const userSchema = new mongoose(
   { timestamps: true }
 );
 
-const posrSchema = new mongoose(
+const postSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -59,4 +58,4 @@ const posrSchema = new mongoose(
 );
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
-export const Post = mongoose.models.Post || mongoose.model("User", postSchema);
+export const Post = mongoose.models.Post || mongoose.model("Post", postSchema);

@@ -11,16 +11,13 @@ const SinglePostPage = async ({ params }) => {
   // console.log(post)
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <Image
-          src="https://images.pexels.com/photos/20877176/pexels-photo-20877176/free-photo-of-general-archive-of-the-indies-in-seville.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
-          className={styles.img}
-          fill
-        />
-      </div>
+      {post.img && (
+        <div className={styles.imgContainer}>
+          <Image src={post.img} alt="" className={styles.img} fill />
+        </div>
+      )}
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>{post?.title}</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.detail}>
           <Image
             src="https://images.pexels.com/photos/20877176/pexels-photo-20877176/free-photo-of-general-archive-of-the-indies-in-seville.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -40,7 +37,7 @@ const SinglePostPage = async ({ params }) => {
             <span className={styles.detailValue}>23.12.1999</span>
           </div>
         </div>
-        <div className={styles.content}>{post?.body}</div>
+        <div className={styles.content}>{post.desc}</div>
       </div>
     </div>
   );

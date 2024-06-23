@@ -1,7 +1,10 @@
-const AdminPage = () => {
-    return(
-        <div>AdminPage</div>
-    )
-}
+export const metadata = {
+  title: "Admin Page",
+  description: "Admin Description",
+};
 
-export default AdminPage
+const AdminPage = () => {
+  return <div>AdminPage</div>;
+};
+
+export default AdminPage;

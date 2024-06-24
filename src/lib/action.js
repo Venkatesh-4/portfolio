@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import { Post, User } from "./models";
 import { connectToDb } from "./utils";
 import { signIn, signOut } from "./auth";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export const addPost = async (formData) => {
   const { title, desc, slug, userId } = Object.fromEntries(formData);
@@ -77,6 +77,15 @@ export const register = async (formData) => {
     });
     await newUser.save();
     // console.log("saved to db");
+  } catch (err) {
+    console.log(err);
+  }
+};
+export const login = async (formData) => {
+  const { username, password } = Object.fromEntries(formData);
+
+  try {
+    await signIn("credentials", { username, password });
   } catch (err) {
     console.log(err);
   }

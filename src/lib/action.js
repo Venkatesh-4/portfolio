@@ -72,7 +72,7 @@ export const register = async (previousState, formData) => {
       img,
     });
     await newUser.save();
-    return { sucess: true };
+    return { success: true };
     // console.log("saved to db");
   } catch (err) {
     console.log(err);

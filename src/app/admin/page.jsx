@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { styles } from "./adminPage.module.css";
+import { styles } from "./admin.module.css";
 import AdminPosts from "@/components/adminPosts/adminPosts";
 import AdminPostForm from "@/components/adminPostForm/adminPostForm";
 import AdminUsers from "@/components/adminUsers/adminUsers";

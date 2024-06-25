@@ -1,5 +1,5 @@
 import React from "react";
-import { styles } from "./adminPosts.module.css";
+import styles from "./adminPosts.module.css";
 import { getPosts } from "@/lib/data";
 import Image from "next/image";
 import { deletePost } from "@/lib/action";

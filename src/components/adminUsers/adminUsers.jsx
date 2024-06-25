@@ -1,5 +1,5 @@
 import React from "react";
-import { styles } from "./adminUsers.module.css";
+import styles from "./adminUsers.module.css";
 
 const AdminUsers = () => {
   return <div className={styles.container}></div>;

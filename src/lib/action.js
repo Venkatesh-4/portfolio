@@ -50,21 +50,17 @@ export const handleLogout = async () => {
   await signOut();
 };
 
-export const register = async (formData) => {
+export const register = async (previousState, formData) => {
   const { username, email, password, img, passwordRepeat } =
     Object.fromEntries(formData);
   if (password !== passwordRepeat) {
-    const message = "Passwords do not match";
-    console.log(message);
-    return message;
+    return { error: "Passwords do not match" };
   }
   try {
     connectToDb();
     const user = await User.findOne({ username });
     if (user) {
-      const message = "Username already exists";
-      // console.log(message);
-      return message;
+      return { error: "Username already exists" };
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -76,9 +72,11 @@ export const register = async (formData) => {
       img,
     });
     await newUser.save();
+    return { sucess: true };
     // console.log("saved to db");
   } catch (err) {
     console.log(err);
+    return { error: "Something went wrong" };
   }
 };
 export const login = async (formData) => {
@@ -88,5 +86,6 @@ export const login = async (formData) => {
     await signIn("credentials", { username, password });
   } catch (err) {
     console.log(err);
+    return { error: "Error with login" };
   }
 };

@@ -1,6 +1,7 @@
 # Portfolio Website
 
-Welcome to my full stack portfolio website repository! This project is based on a fork of [Safak's Next.js 14 Starter](https://github.com/safak/next14-starter) repository. The project was also inspired by the tutorial available on [YouTube](https://www.youtube.com/watch?v=vCOSTG10Y4o).
+Welcome to my full stack portfolio website repository! This project is based on a fork of [Safak's Next.js 14 Starter](https://github.com/safak/next14-starter) repository and was inspired by a tutorial available on [YouTube](https://www.youtube.com/watch?v=vCOSTG10Y4o).
+
 ## Table of Contents
 
 - [Description](#description)
@@ -11,18 +12,18 @@ Welcome to my full stack portfolio website repository! This project is based on 
 
 ## Description <a name="description"></a>
 
-This repository contains the code for a portfolio website. it hasnt been hosted, but feel free to clone the repo and alter stuff to suit your needs. I have commits at every step along the way.
+This repository contains the code for my portfolio website. While it hasn't been hosted yet, feel free to clone the repository and customize it to suit your needs. I've made commits at every step along the way.
 
 ## Features <a name="features"></a>
 
 - **Responsive Design**: Ensures the website looks great on all devices.
-- **User Authentication**: Through a third party website (github) and also through a website form.
-- **Next.js App Route**: Folder structure and page navigation
-- **Catching**: Manually selecting what has to be cached and what shouldnt
-- **Component based development**: Creating components and calling them like tags in the page required.
-- **Back end**: Using MONGODB ATLAS to serve as the back end for this project
-- **SEO**: SEO optimization but dynamically changing the title and description of the page.
-- **Admin Dashboard**: Page from which the users and posts can be contolled.
+- **User Authentication**: Implemented through GitHub OAuth and custom form authentication.
+- **Next.js App Structure**: Organized folder structure and efficient page navigation.
+- **Caching**: Ability to manually select cached and non-cached content.
+- **Component-Based Development**: Utilization of reusable components throughout the site.
+- **Backend**: MongoDB Atlas used as the backend for this project.
+- **SEO Optimization**: Dynamic title and meta description for enhanced search engine optimization.
+- **Admin Dashboard**: Allows management of users and posts.
 
 ## Technologies Used <a name="technologies-used"></a>
 
@@ -60,5 +61,5 @@ Contributions are welcome! Here's how you can contribute:
 
 1. Fork the repository and create your branch from `main`.
 2. Clone the forked repository to your local machine.
-3. Make your changes and test them thoroughly.
+3. Make your changes and thoroughly test them.
 4. Create a pull request explaining your changes.

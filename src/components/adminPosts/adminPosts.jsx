@@ -6,7 +6,7 @@ import { deletePost } from "@/lib/action";
 
 const AdminPosts = async () => {
   const posts = await getPosts();
-
+  console.log(posts);
   return (
     <div className={styles.container}>
       <h1>Posts</h1>
@@ -14,8 +14,8 @@ const AdminPosts = async () => {
         <div className={styles.post} key={post.id}>
           <div className={styles.detail}>
             <Image
-              src={post.img || "/public/noavatar.png"}
-              alt="image"
+              src={post.img || "/noavatar.png"}
+              alt=""
               width={50}
               height={50}
             />

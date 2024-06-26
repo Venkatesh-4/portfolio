@@ -21,7 +21,7 @@ export const metadata = {
 const BlogPage = async () => {
   // const posts = await getPosts();
   const posts = await getData();
-
+  // console.log(posts);
   return (
     <div className={styles.container}>
       {posts.map((post) => (
